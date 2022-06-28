@@ -1,0 +1,72 @@
+<form action="" method="Post">
+    {% csrf_token %}
+    <input name="profile_url" placeholder="請輸入臉書連結">
+    <input type="submit" value="查詢">
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>姓名</th>
+
+            <th>性別</th>
+
+            <th bgcolor = #FFECEC>貼文數</th>
+            <th bgcolor = #FFECEC>內文</th>
+            <th bgcolor = #FFECEC>發布時間</th>
+            <th bgcolor = #FFECEC>相差時間</th>
+            <th bgcolor = #FFECEC>按讚數</th>
+            <th bgcolor = #FFECEC>留言數</th>
+
+            <th bgcolor = #DDDDFF>簡介</th>
+            <th bgcolor = #DDDDFF>總筆數</th>
+
+            <th bgcolor = #D2E9FF>相片</th>
+            <th bgcolor = #D2E9FF>總張數</th>
+
+            <th>大頭貼</th>
+
+            <th>封面照片</th>
+
+            <th bgcolor = #E8FFC4>好友清單</th>
+            <th bgcolor = #E8FFC4>好友男女比</th>
+            <th bgcolor = #E8FFC4>總好友數</th>
+
+            <th bgcolor = #FFF8D7>說讚的內容</th>
+            <th bgcolor = #FFF8D7>總筆數</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in info %}
+        <tr>
+            <td>{{ i.name }}</td>
+
+            <td>{{ i.gender }}</td>
+
+            <td>{{ i.post_num }}</td>
+            <td>{{ i.post1 }}</td>
+            <td>{{ i.post2 }}</td>
+            <td>{{ i.post3 }}</td>
+            <td>{{ i.post4 }}</td>
+            <td>{{ i.post5 }}</td>
+
+            <td>{{ i.about }}</td>
+            <td>{{ i.about_num }}</td>
+
+            <td>{{ i.photo }}</td>
+            <td>{{ i.photo_num }}</td>
+
+            <td>{{ i.propic }}</td>
+
+            <td>{{ i.cover }}</td>
+
+            <td>{{ i.friend }}</td>
+            <td>{{ i.friend_ratio }}</td>
+            <td>{{ i.friend_num }}</td>
+
+            <td>{{ i.likes }}</td>
+            <td>{{ i.likes_num }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
