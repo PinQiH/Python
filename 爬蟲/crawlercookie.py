@@ -1,4 +1,5 @@
 #利用cookie在爬蟲時，偽造成一般使用者
+
 import urllib.request as req
 def getdata(url):
     #偽造成一般使用者，增加request header 的資訊(開發人員工具network)
