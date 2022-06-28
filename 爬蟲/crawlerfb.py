@@ -1,5 +1,4 @@
-#pip install selenium
-#https://sites.google.com/a/chromium.org/chromedriver/downloads
+#爬取臉書個人檔案
 
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
