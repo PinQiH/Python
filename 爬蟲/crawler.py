@@ -1,4 +1,4 @@
-#抓取網頁原始碼
+#爬蟲練習
 
 '''
 import urllib.request as req
