@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>待辦事項</label>
+            {{ form.title }}
+        </div>
+        <div class="form-group">
+            <label class="form-check-label">是否完成</label>
+            {{ form.finish }}
+        </div>
+        <input class="btn btn-primary" type="submit" value="儲存" />
+    </form>
+{% endblock  %}
