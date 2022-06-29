@@ -1,3 +1,5 @@
+#雙向鏈結串列的加入、刪除
+
 import sys
 
 class Student:
