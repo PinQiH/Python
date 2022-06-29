@@ -1,6 +1,7 @@
 #堆疊的加入、刪除
 
 import sys
+
 MAX = 8
 st = [''] * MAX
 top = -1
